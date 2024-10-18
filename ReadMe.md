@@ -9,6 +9,13 @@
 2. 1 年內**至少**寫過一遍 Neetcode 150 (deadline: 2025/10/10)
 3. 參加 leetcode 周賽 **至少** 十次
 
+## 檔案說明
+- file/folder 命名方式：
+  - 使用 vscode leetcode 插件產生的檔案 (題目號 + 題目名)
+  - 不同解法則會加上不同後綴名 （如： contains-dupliate-improve）
+- Notes.md: 
+  - 題目心得 & 小記
+
 ## Reference
 - [neetcode （leetcode 練習網站）](https://neetcode.io/)
 - [YT 刷題經驗分享](https://www.youtube.com/watch?v=dJc-h7ui8wc)
