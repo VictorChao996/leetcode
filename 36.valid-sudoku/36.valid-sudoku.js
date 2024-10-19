@@ -4,7 +4,7 @@
  * [36] Valid Sudoku
  * Note: 暴力解
  * Time: O(3 * n), n 為 board 大小 (81 個數字)
- * Space: O(1), 需要額外的統計數量 array (大小為 9)
+ * Space: O(9), 需要額外的統計數量 array (大小為 9)
  */
 
 // @lc code=start

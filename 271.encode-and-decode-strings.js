@@ -12,7 +12,7 @@ class Solution {
 
 		for (let i = 0; i < strs.length; i++) {
 			const strLen = strs[i].length;
-			res += strLen;
+			res += strLen; //將原文字串的長度記錄下來
 			res += "#";
 			for (let j = 0; j < strLen; j++) {
 				res += strs[i][j];
