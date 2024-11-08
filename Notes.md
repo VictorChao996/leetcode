@@ -15,6 +15,16 @@
 - Tags: *array, hash-table*
 - 難度: Easy
 
+### 3. Longest Substring Without Repeating Characters
+- 說明:
+  - 給一個字串, 求最長不重複字元的子字串
+- 解題方法:
+  - [sliding window](./3.longest-substring-without-repeating-characters.js): 遍歷 array 並持續更新 maxLength 值, 關鍵是利用 map or set 來快速確認新的字元是否已經存在
+- 小記 & 心得
+  - 比較 trick 的部分是如何移動 left pointer, 讓每一次的區間 （連續substring）皆為不重複字元
+- Tags: Hash Table, Sliding Window
+- 難度: Easy
+
 ### 11. Container With Most Water
 - 說明：
   - 給一個一維 array 表示柱子的柱高, 求任意兩柱子可圍成的最大含水量
@@ -36,6 +46,9 @@
 - Tags: *array, two-pointer, sorting*
 - 難度：Medium
 
+### 20. Valid Parentheses
+TODO
+
 ### 36. Valid Sudoku
 - 說明：
   - 給一個二維陣列表示數獨的樣貌, 求該數獨是否合法
@@ -52,7 +65,7 @@
   - 給一個一維數字陣列表示像素高, 求像素圖所能裝買的的最大水量
 - 解題方法：
   - [Two Array (maxLeft & maxRight)](./42.trapping-rain-water/42.trapping-rain-water.js): 單位格子水能困住的水量為: min(左側最高點, 右側最高點) - 當前柱高, 用兩陣列分別計算出每一格的 maxLeft & maxRight 後, 再依序計算將加總即為解答。 Space: O(n)
-  - two pointer 解：TODO, Space O(1)
+  - two pointer 解： Space O(1)
 - 小記 & 心得：
   - 第一個 Hard 題目, 被 two pointer 誤導, 沒想到用兩個陣列就能解
   - two pointer 題目找時間再寫, 滿 tricky 的
@@ -76,6 +89,19 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags: *array, hash table, string, sorting*
 - 難度：Medium
 
+### 121 Best Time to Buy and sell stock
+- 說明：
+  - 給一個一維數字陣列表示隨時間的股票金額, 求這段時間內的最大獲利 (賣 - 買)
+- 解題方法：
+  - [two pointer 變形](./121.best-time-to-buy-and-sell-stock.js)： 遍歷 array 找出最低點 ＆ 持續更新 maxProfix 就行
+- 小記 & 心得：
+  - 對這題有印象, 懂了之後就非常簡單明瞭且不會忘了解答
+- Tags:
+  - Array
+- 難度：Easy
+
+
+
 ### 125 Valid Palindrome
 - 說明：
   - 給一個 string, 若該 string 的所有字母 & 數字字元從頭與尾一一比對相同的話, 此 string 為 palindrome 返回 true, 反之則回 false
@@ -85,6 +111,9 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 這題滿單純的, 就是要知道怎麼轉換大寫字母為小寫, 並過濾掉所有非數字 ＆ 英文字母的字元 (ASCII), 每個語言提供的轉換函式不同, 用到在查, 不用死記硬背
 - Tags:
 - 難度：Easy
+
+### 155 min-stack
+TODO
 
 ### 167 Two Sum II - Input Array is Sorted
 - 說明：
