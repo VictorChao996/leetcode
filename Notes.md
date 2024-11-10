@@ -47,7 +47,17 @@
 - 難度：Medium
 
 ### 20. Valid Parentheses
-TODO
+- 說明：
+  - 給一個只包含 {,[,(,),],}  六個字元的字串, 求這個字串的括號組合是否合理
+- 解題方法：
+  - [stack 解法](./20.valid-parentheses/20.valid-parentheses.js)
+  - [stack 解法優化](./20.valid-parentheses/20.valid-parentheses-improve.js)
+- 小記 & 心得：
+  - 這題就是用 stack 解, 了解為何要使用 stack 資料結構後就通了, 不難的題目。
+  - 優化解法可以看一下, 整理一下 if-else 結構當(只需要新增在 object 中)
+- Tags:
+  - *String, Stack*
+- 難度：Easy
 
 ### 36. Valid Sudoku
 - 說明：
@@ -113,7 +123,14 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度：Easy
 
 ### 155 min-stack
-TODO
+- 說明：
+  - 給一個 min-stack 的定義, 根據限制條件實作所有的 method 。
+- 解題方法：
+  - [多一個 stack 解](./155.min-stack.js)：多一個 stack 資料結構來記錄隨著值加入而改變的 minValue 值,此 min-stack 會跟著原本的 stack 結構 push & pop, 所以所有 method 操作都可以在 O(1) 哪做完
+- 小記 & 心得：
+  - 有趣的一個小題目, 想通了之後簡直豁然開朗, 而且非常有意思的是, 題目名稱本身就是一個最大的提示 (min-stack) XD
+- Tags: *Stack*
+- 難度：Medium
 
 ### 167 Two Sum II - Input Array is Sorted
 - 說明：
