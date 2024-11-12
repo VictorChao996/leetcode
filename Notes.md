@@ -142,6 +142,12 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags: *two-pointer*
 - 難度：Medium
 
+### 190 Reverse Bits
+TODO
+
+### 191 Number of 1 bits
+TODO
+
 ### 217 Contain Duplicate
 - 說明：
   - input 一個數字陣列, 若陣列中有重複的數字則 return true, 反之則 false
@@ -202,6 +208,9 @@ Output: [0,0,9,0,0]
   - 還以為是要用比較複雜的 separater 去解, 沒想到有這種方法
 - Tags: *string*
 - 難度：Medium
+
+### 338 Counting Bits
+TODO
 
 ### 347 Top K Frequent Element
 - 說明：
