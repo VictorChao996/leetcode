@@ -146,7 +146,15 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 TODO
 
 ### 191 Number of 1 bits
-TODO
+- 說明：
+  - 給一個正整數 n, 求其轉換成二進制後, bit 為 1 的數量加總。
+- 解題方法：
+  - [用短除法的過程來計算 total](./191.number-of-1-bits.js)
+- 小記 & 心得：
+  - 就是一個數學題目, 了解 10 進位轉 2 進位的原理與方法後就可以寫出來
+- Tags:
+  - *Divide and Conquer, Bit Manipulation*
+- 難度：Easy
 
 ### 217 Contain Duplicate
 - 說明：
@@ -197,6 +205,20 @@ Output: [0,0,9,0,0]
 - 小記：
   - sort 方法有借助 JS 的幾個 method, split(), sort(), join() 來處理字串排序
 - Tags: hash table, sorting
+- 難度：Easy
+
+### 268 Missing Number
+- 說明：
+  - input 會給一個大小為 n 的數字 array nums, 其中 array 內的數字範圍為 [0,n] , 例如: n 為 2 時, [0,2] 為 0,1,2 。求 nums 中缺失的那個整數數字。
+- 解題方法：
+  - Sort 法一：直接 sort input 後在遍歷回圈找出答案
+  - [Sort 法二](./268.missing-number/268.missing-number.js)：使用 bucket 存數字, 在找出缺的那一個
+  - [Math 解法](./268.missing-number/268.missing-number-improve_math.js): 完美陣列 - input = missing number
+  - [Bitwise XOR 解](./268.missing-number/268.missing-number-improve_xor.js): 利用 XOR 的數學邏輯求出 missing number
+- 小記 & 心得：
+  - 沒想到最一開始的解法居然多此一舉, 我居然沒想到 sum 解如此單純的優化, 寫 sort 問題寫多了 XD
+  - XOR 解：這又是哪一位天才想到的解法, 凡人基本上不可能自己想出來的。
+- Tags: *Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting*
 - 難度：Easy
 
 ### 271 Encoded And Decode Strings
