@@ -2,6 +2,8 @@
  * @lc app=leetcode id=191 lang=javascript
  *
  * [191] Number of 1 Bits
+ * Time Complexity: O(logn)
+ * Space Complexity: O(1)
  */
 
 // @lc code=start

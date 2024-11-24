@@ -8,12 +8,13 @@
 - 解題方法：
   1. [BF 解 O(n^2)](./1.two-sum/1.two-sum.js)
   2. [Map 解 O(n)](./1.two-sum/1.two-sum-improve.js)
-  3. Map 解優化 (One pass): 邊檢查邊建立 hash map, 不用先掃一遍 array
+  3. [Map 解優化 (One pass)](./1.two-sum/1.two-sum-improve-one-pass.js): 邊檢查邊建立 hash map, 不用先掃一遍 array
 - 小記 & 心得：
   - 上次寫這題是很久之前了,對 map 的使用不熟, 所以一直抓不到為何能夠 O(n) 解
   - 記住一個重點就行, map 查找複雜度為平均為 O(1), 最差為 O(n)
 - Tags: *array, hash-table*
 - 難度: Easy
+- [X] post
 
 ### 3. Longest Substring Without Repeating Characters
 - 說明:
@@ -45,6 +46,7 @@
   - two sum 有想到, 但是處理 duplicate 的方式卡了很久
 - Tags: *array, two-pointer, sorting*
 - 難度：Medium
+- [X] post
 
 ### 20. Valid Parentheses
 - 說明：
@@ -58,6 +60,7 @@
 - Tags:
   - *String, Stack*
 - 難度：Easy
+- [X] blog post
 
 ### 36. Valid Sudoku
 - 說明：
@@ -109,6 +112,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags:
   - Array
 - 難度：Easy
+- [X] blog post
 
 
 
@@ -131,6 +135,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 有趣的一個小題目, 想通了之後簡直豁然開朗, 而且非常有意思的是, 題目名稱本身就是一個最大的提示 (min-stack) XD
 - Tags: *Stack*
 - 難度：Medium
+- [X] blog post
 
 ### 167 Two Sum II - Input Array is Sorted
 - 說明：
@@ -141,6 +146,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 重點是如何選擇要移動 two pointer 中的哪一個 pointer
 - Tags: *two-pointer*
 - 難度：Medium
+- [X] Post
 
 ### 190 Reverse Bits
 TODO
@@ -155,6 +161,7 @@ TODO
 - Tags:
   - *Divide and Conquer, Bit Manipulation*
 - 難度：Easy
+- [X] blog post
 
 ### 217 Contain Duplicate
 - 說明：
@@ -220,6 +227,7 @@ Output: [0,0,9,0,0]
   - XOR 解：這又是哪一位天才想到的解法, 凡人基本上不可能自己想出來的。
 - Tags: *Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting*
 - 難度：Easy
+- [X] blog post
 
 ### 271 Encoded And Decode Strings
 - 說明：
@@ -232,7 +240,16 @@ Output: [0,0,9,0,0]
 - 難度：Medium
 
 ### 338 Counting Bits
-TODO
+- 說明：
+  - 給一個整數 n , 返回一個大小為 n+1 的數字陣列, 其中的每項元素 i (0 <= i <= n) 為 i 轉換成二進制後 bit 1 的數量。
+- 解題方法：
+  - [Brute Force](./338.counting-bits/338.counting-bits.js): 跑 n 遍 Number-of-1-bits 建立起 array result, Time: O(nlogn)
+  - [DP 解](./338.counting-bits/338.counting-bits-improve.js): 找出規律並 bottom up 建立起規則
+- 小記 & 心得：
+  - 這題如果是用 Brute Force 的話的確是 easy 題, 因為就是執行數個 number-of-1-bits 的運算 (短除法), 但要在 O(n) 解的話就必須使用 DP 了, 難度肯定有到 medium
+- Tags:*Dynamic Programming, Bit Manipulation*
+- 難度：Easy
+- [X] blog post
 
 ### 347 Top K Frequent Element
 - 說明：
@@ -256,5 +273,6 @@ Output: [2,3]
 - 小記 & 心得：
 - Tags:
 - 難度：
+- [ ] post
 
 

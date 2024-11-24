@@ -2,6 +2,9 @@
  * @lc app=leetcode id=338 lang=javascript
  *
  * [338] Counting Bits
+ * Time Complexity: O(n)
+ * Space Complexity: O(n) or O(1) (看 return array 算不算 additional space)
+ * Note: DP 解, 找出 counting bits 規則後 bottom up 建立 dp array 即為解答
  */
 
 // @lc code=start
@@ -10,24 +13,16 @@
  * @return {number[]}
  */
 var countBits = function (n) {
-	let result = [];
+	let result = new Array(n + 1).fill(0);
+	let offset = 1;
 
-	//NOTE: TODO
-	for (let i = 0; i < n + 1; i++) {
-		// result.push(counting(i));
+	for (let i = 1; i < n + 1; i++) {
+		if (offset * 2 == i) offset *= 2;
+
+		result[i] = 1 + result[i - offset];
 	}
 
 	return result;
 };
 
-// let counting = function (n) {
-// 	if (n == 0) return 0;
-
-// 	let total = 0;
-// 	while (n > 1) {
-// 		if (n % 2 == 1) total += 1;
-// 		n = Math.floor(n / 2);
-// 	}
-// 	return total + 1;
-// };
 // @lc code=end
