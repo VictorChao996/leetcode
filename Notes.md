@@ -24,7 +24,7 @@
 - 小記 & 心得
   - 比較 trick 的部分是如何移動 left pointer, 讓每一次的區間 （連續substring）皆為不重複字元
 - Tags: Hash Table, Sliding Window
-- 難度: Easy
+- 難度: Medium
 
 ### 11. Container With Most Water
 - 說明：
@@ -60,7 +60,7 @@
 - Tags:
   - *String, Stack*
 - 難度：Easy
-- [X] blog post
+- [X] post
 
 ### 36. Valid Sudoku
 - 說明：
@@ -94,13 +94,14 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 ```
 - 解題方法：
   1.  [sort 字串後找出 anagram 在陣列中的位置](./49.group-anagram/49.group-anagrams.js): Time: O(m * nlogn)
-  2.  HashMap 解: 用 hashmap 找出 anagram , Time: O(m * n)
+  2.  [Bucket 解](./49.group-anagram/49.group-anagrams-bucket.js): 用 count 找出 anagram , Time: O(m * n)
 - 小記 & 心得：
   - 242-valid-anagram 的進階, 多了個尋找字串在陣列中的位置
   - 使用 JS object 替代 map 來寫需要注意, 因 JS object 非 iterable, 所以 keys & Values 要透過 JS 提供的 method 來取得
   - 也許有更好的解法, 暫時未知
 - Tags: *array, hash table, string, sorting*
 - 難度：Medium
+- [X] Post
 
 ### 121 Best Time to Buy and sell stock
 - 說明：
@@ -176,6 +177,7 @@ TODO
   - 這題就一樣是在練習 map 結構的使用, 不過實作是用 JS object 來替代 map 
 - Tags: array, hash table, sorting
 - 難度：Easy
+- [X] post
 
 ### 238 Product Of Array Expect Self
 - 說明：
@@ -209,10 +211,12 @@ Output: [0,0,9,0,0]
 - 解題方法：
   1. [sort 解](./242-valid-anagram/242.valid-anagram.js): 講兩個字串先 sort 後再比對是否相同, Time: O(nlogn)
   2. [Map 解](./242-valid-anagram/242.valid-anagram-improve.js): 將字串中的字母存到 map 中統計, 這樣就不用先排序, Time Complexity: O(n)
+  3. [Map 解 2](./242-valid-anagram/242.valid-anagram-improve2.js): 同上, 但是在簡潔一點, 且是使用真正的 Map, 而不是 Object
 - 小記：
   - sort 方法有借助 JS 的幾個 method, split(), sort(), join() 來處理字串排序
 - Tags: hash table, sorting
 - 難度：Easy
+- [x] post
 
 ### 268 Missing Number
 - 說明：
