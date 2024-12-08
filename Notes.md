@@ -23,8 +23,10 @@
   - [sliding window](./3.longest-substring-without-repeating-characters.js): 遍歷 array 並持續更新 maxLength 值, 關鍵是利用 map or set 來快速確認新的字元是否已經存在
 - 小記 & 心得
   - 比較 trick 的部分是如何移動 left pointer, 讓每一次的區間 （連續substring）皆為不重複字元
-- Tags: Hash Table, Sliding Window
+  - ![leetcode 3 mind graph](./images/leetcode_3_longest_substring_without_repeating_characters.excalidraw.png)
+- Tags: *Hash Table, Sliding Window*
 - 難度: Medium
+- [x] Post
 
 ### 11. Container With Most Water
 - 說明：
@@ -36,6 +38,7 @@
   - 重點在於找出如何移動 two pointer 的方法
 - Tags: *two-ponter*
 - 難度：Medium
+- [x] Post
 
 ### 15. 3 Sum
 - 說明：
@@ -46,7 +49,7 @@
   - two sum 有想到, 但是處理 duplicate 的方式卡了很久
 - Tags: *array, two-pointer, sorting*
 - 難度：Medium
-- [X] post
+- [x] post
 
 ### 20. Valid Parentheses
 - 說明：
@@ -60,7 +63,7 @@
 - Tags:
   - *String, Stack*
 - 難度：Easy
-- [X] post
+- [x] post
 
 ### 36. Valid Sudoku
 - 說明：
@@ -101,7 +104,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 也許有更好的解法, 暫時未知
 - Tags: *array, hash table, string, sorting*
 - 難度：Medium
-- [X] Post
+- [x] Post
 
 ### 121 Best Time to Buy and sell stock
 - 說明：
@@ -113,7 +116,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags:
   - Array
 - 難度：Easy
-- [X] blog post
+- [x] Post
 
 
 
@@ -143,6 +146,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 給一個已經 sort 過的 (asc) 的 一維數字陣列, 求和為 target 的位置
 - 解題方法：
   - [two pointer O(n)](./167.two-sum-ii-input-array-is-sorted.js): 跟 11 題 container-with-most-water 類似, 都是用 two pointer 一前一後向中間移動解
+  - ![leetcode 167 mind graph](./images/leetcode_167_two_sum_2_input_array_is_sorted.svg)
 - 小記 & 心得：
   - 重點是如何選擇要移動 two pointer 中的哪一個 pointer
 - Tags: *two-pointer*
@@ -249,6 +253,7 @@ Output: [0,0,9,0,0]
 - 解題方法：
   - [Brute Force](./338.counting-bits/338.counting-bits.js): 跑 n 遍 Number-of-1-bits 建立起 array result, Time: O(nlogn)
   - [DP 解](./338.counting-bits/338.counting-bits-improve.js): 找出規律並 bottom up 建立起規則
+  - ![leetcode 338 mind graph](./images/leetcode_338_counting_bits.excalidraw.png)
 - 小記 & 心得：
   - 這題如果是用 Brute Force 的話的確是 easy 題, 因為就是執行數個 number-of-1-bits 的運算 (短除法), 但要在 O(n) 解的話就必須使用 DP 了, 難度肯定有到 medium
 - Tags:*Dynamic Programming, Bit Manipulation*
@@ -270,6 +275,30 @@ Output: [2,3]
   - 在 Map 中找出前 K 筆最大的方式也許有更好的做法? 抑或是 map 的 key:value 儲存內容需要調整
 - Tags: array, hash table, heap 
 - 難度：Medium
+
+### 424 Longest Repeating Character Replacement
+- 說明：給一個  input 字串 s, 與一個整數 k , 其中 k 表示可以用任意字元替換 s 中單一字元的次數, 求 s 經過最多 K 次操作後, 所能包含的最大 “相同字元子字串”。例：S = AAAABA, k=2, 此時  result 為 6 (B 可替換成 Ａ)
+- 解題方法：
+  - [Sliding Window 解](./424.longest-repeating-character-replacement/)
+- 小記 & 心得：
+  - 好難...就算是暴力解也需要思考一下, 在沒有提示的情況下, 跟 Hard 差不多 XD
+  - 這題的思考過程中分享在 [blog post - leetcode w5](https://victorchao996.github.io/blog/Post/leetcode_weekly_practice/leetcode_w5.html#leetcode-practice-w5) 中
+- Tags: *Hash Table, String, Sliding Window*
+- 難度：Medium
+- [x] post
+
+### 1657 Determine If Two Strings Are Close
+- 說明：
+  - 給兩個 input string, 若其中一個字串經過任意次數的兩種 operation 後與另一字串相等, 則稱兩個字串為 "Close"。其中運算一為, 字串中的兩字元位置可以任意交換, 運算二為不同的字串出現的頻率可以互相交換。
+- 解題方法：
+  - 找出關鍵, 能經過上述兩個運算表示字元順序不重要且字串中各個字元出現的總頻率是固定的, 依據以上思路去解答即可
+  - [參考解](./1657.determine-if-two-strings-are-close.js)
+- 小記 & 心得：
+  - 雖然有看了 Hint, 但是沒有想到解這題的時候有這麼順利, 不到十分鐘就寫出來了, 這給我滿大的成就感的 XD, 寫 Easy 題都不見得可以這麼快了, 更別說 Medium。
+  - 用 excalidraw 畫了思考圖：![leetcode 1657 mind graph](./images/leetcode_1657_determine_if_two_strings_are_close.excalidraw.png)
+- Tags: *Hash Table, String, Sorting, Counting*
+- 難度：Medium
+- [ ] post
 
 ### Template
 - 說明：
