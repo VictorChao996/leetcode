@@ -26,7 +26,7 @@
   - ![leetcode 3 mind graph](./images/leetcode_3_longest_substring_without_repeating_characters.excalidraw.png)
 - Tags: *Hash Table, Sliding Window*
 - 難度: Medium
-- [x] Post
+- [X] Post
 
 ### 11. Container With Most Water
 - 說明：
@@ -38,7 +38,7 @@
   - 重點在於找出如何移動 two pointer 的方法
 - Tags: *two-ponter*
 - 難度：Medium
-- [x] Post
+- [X] Post
 
 ### 15. 3 Sum
 - 說明：
@@ -49,7 +49,7 @@
   - two sum 有想到, 但是處理 duplicate 的方式卡了很久
 - Tags: *array, two-pointer, sorting*
 - 難度：Medium
-- [x] post
+- [X] post
 
 ### 20. Valid Parentheses
 - 說明：
@@ -63,7 +63,20 @@
 - Tags:
   - *String, Stack*
 - 難度：Easy
-- [x] post
+- [X] post
+
+### 21 Merge Tow Sorted List
+- 說明：
+  - 給兩個 Linked List 的 head (node), 其中這兩個 Linked List 中 node 的 value 是由小到大排序, 返回兩個 list 合併之後的結果 (須維持由小到大的排序限制)
+- 解題方法：
+  - [兩兩比較, 類似 two pointer](./21.merge-two-sorted-lists/21.merge-two-sorted-lists.js)
+  - [Space 優化, O(1)](./21.merge-two-sorted-lists/21.merge-two-sorted-lists-space-improve.js)
+- 小記 & 心得：
+  - 基礎題目, 可當作複習 Linked List 的基本操作
+- Tags:
+  - *Linked-List*
+- 難度：Easy
+- [X] post
 
 ### 36. Valid Sudoku
 - 說明：
@@ -104,7 +117,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 也許有更好的解法, 暫時未知
 - Tags: *array, hash table, string, sorting*
 - 難度：Medium
-- [x] Post
+- [X] Post
 
 ### 121 Best Time to Buy and sell stock
 - 說明：
@@ -116,7 +129,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags:
   - Array
 - 難度：Easy
-- [x] Post
+- [X] Post
 
 
 
@@ -129,6 +142,20 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 這題滿單純的, 就是要知道怎麼轉換大寫字母為小寫, 並過濾掉所有非數字 ＆ 英文字母的字元 (ASCII), 每個語言提供的轉換函式不同, 用到在查, 不用死記硬背
 - Tags:
 - 難度：Easy
+
+### 143 Reorder List
+- 說明：
+  - 給一個 linked list 的 head, 根據題目規則重新排序整個 Linked List, 題目限制不能更改 node 本身的值, 只能更改 node 本身。其中的規則為, 原先的 list L0 → L1 → … → Ln - 1 → Ln, 會重新排序為 L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → … 
+- 解題方法：
+  - [Space O(n)](./143.reorder-list/143.reorder-list.js)
+  - [Space O(1)](./143.reorder-list/143.reorder-list-improve.js)
+- 小記 & 心得：
+  - 滿 tricky 的,又是一個自己想不到, 但是看 Hint 就恍然大悟的題目。
+  - 很好的融合 [206 - Reverse Linked List](#206-reverse-linked-list), [21 - Merge Two Sorted List](./21.merge-two-sorted-lists/), [876 - Middle Of The Linked List](./876.middle-of-the-linked-list.js) 這三個 Easy 題的進階題, 值得多寫幾次 XD
+  - ![143 excalidraw graph](./images/leetcode_143_reorder_list.excalidraw.png)
+- Tags: *Linked-List*
+- 難度： Medium
+- [X] post
 
 ### 155 min-stack
 - 說明：
@@ -167,6 +194,21 @@ TODO
   - *Divide and Conquer, Bit Manipulation*
 - 難度：Easy
 - [X] blog post
+
+### 206 Reverse Linked List
+- 說明：
+  - 給一個 Linked List 的 head, 將此 linked list 反轉後並 return head
+- 解題方法：
+  - [額外空間](./206.reverse-linked-list/206.reverse-linked-list-additional.js): 先遍歷一遍 array 並將 value 存在 array 中, 最後在建一個新的反轉 LinkedList, 會使用到額外空間 O(n+n)=O(n)
+  - [iterative](./206.reverse-linked-list/206.reverse-linked-list-iteratively.js): 遍歷 LinkedList, 一邊 run 一邊反轉整個 LinkedList
+  - [recurrsive](./206.reverse-linked-list/206.reverse-linked-list-recursive.js): 遞歸解法, 將問題轉換成更小的子問題(在這題中為下一個 node 形成的 reverse list), 處理好 edge case 即可
+- 小記 & 心得：
+  - iterative 以前就學過, 所以還算容易
+  - recurrsive 得解法好像是第一次看到, 一開始比較抽象一點, 但將圖畫出來後有比較好理解了
+  - ![206 excalidraw graph](./images/leetcode_206_reverse_linked_list.excalidraw.png)
+- Tags: *Linked-List*
+- 難度： Easy
+- [X] post
 
 ### 217 Contain Duplicate
 - 說明：
@@ -220,7 +262,7 @@ Output: [0,0,9,0,0]
   - sort 方法有借助 JS 的幾個 method, split(), sort(), join() 來處理字串排序
 - Tags: hash table, sorting
 - 難度：Easy
-- [x] post
+- [X] post
 
 ### 268 Missing Number
 - 說明：
@@ -285,7 +327,20 @@ Output: [2,3]
   - 這題的思考過程中分享在 [blog post - leetcode w5](https://victorchao996.github.io/blog/Post/leetcode_weekly_practice/leetcode_w5.html#leetcode-practice-w5) 中
 - Tags: *Hash Table, String, Sliding Window*
 - 難度：Medium
-- [x] post
+- [X] post
+
+### 876 Middle of the Linked List
+- 說明：
+  - 給一個 Linked List 的 head, 返回此 linked list 的中間 node, 若 node 總數為偶數, 則返回中間兩
+ node 的後者。
+- 解題方法：
+  - [快慢指標](./876.middle-of-the-linked-list.js)
+- 小記 & 心得：
+  - 又是一個想通之後就不會忘記的簡單題目
+- Tags: *Linked-List*
+- 難度：Easy
+- [X] post
+
 
 ### 1657 Determine If Two Strings Are Close
 - 說明：
