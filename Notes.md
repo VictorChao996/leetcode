@@ -26,7 +26,7 @@
   - ![leetcode 3 mind graph](./images/leetcode_3_longest_substring_without_repeating_characters.excalidraw.png)
 - Tags: *Hash Table, Sliding Window*
 - 難度: Medium
-- [X] Post
+- [X] post
 
 ### 11. Container With Most Water
 - 說明：
@@ -37,8 +37,8 @@
   - 經典 two pointer 題目, 還記得大學跟其他人一起解的時候卡很久
   - 重點在於找出如何移動 two pointer 的方法
 - Tags: *two-ponter*
-- 難度：Medium
-- [X] Post
+- 難度: Medium
+- [X] post
 
 ### 15. 3 Sum
 - 說明：
@@ -48,7 +48,20 @@
 - 小記 & 心得：
   - two sum 有想到, 但是處理 duplicate 的方式卡了很久
 - Tags: *array, two-pointer, sorting*
-- 難度：Medium
+- 難度: Medium
+- [X] post
+
+### 19. Remove nth Node From End of List
+- 說明：
+  - 給一個 linked list head 與 數字 n, 返回移除倒數第 n 個 node 之後的新 linked list
+- 解題方法：
+  - [two pass](./19.remove-nth-node-from-end-of-list/19.remove-nth-node-from-end-of-list.js): 先遍歷一遍計算 list 長度, 在遍歷一次移除要移除的 node
+  - [one pass](./19.remove-nth-node-from-end-of-list/19.remove-nth-node-from-end-of-list-one-pass.js): 用兩個指標, 先讓其中一個指標走 n 步, 之後再同時移動兩個指標, 直到其一碰到底, 另一個指標的下一個 node 即為要移除之 node。
+- 小記 & 心得：
+  - 也是一個有意思的題目, 感覺 linked list 題目有不少 two pointer 題啊
+- Tags:
+  - *Linked List*
+- 難度: Medium
 - [X] post
 
 ### 20. Valid Parentheses
@@ -62,7 +75,7 @@
   - 優化解法可以看一下, 整理一下 if-else 結構當(只需要新增在 object 中)
 - Tags:
   - *String, Stack*
-- 難度：Easy
+- 難度: Easy
 - [X] post
 
 ### 21 Merge Tow Sorted List
@@ -75,7 +88,21 @@
   - 基礎題目, 可當作複習 Linked List 的基本操作
 - Tags:
   - *Linked-List*
-- 難度：Easy
+- 難度: Easy
+- [X] post
+
+### 23. Merge K Sorted List
+- 說明：
+  - 給一個 array lists 其中為數個 sorted linked list 的 head （linked list 中的 node 值由小到大排序）, 將所有 linked list 合併成一個新的 sorted linked list 後返回
+- 解題方法：
+  - [sort 解](./23.merge-k-sorted-list/23.merge-k-sorted-lists.js): 先記錄下所有的 node valud, 將其排序後再建立一個全新的 sorted linked list
+  - [multiple merge two sorted list](./23.merge-k-sorted-list/23.merge-k-sorted-lists-improve.js): 執行數次 merge two sorted list 的操作直到 array 中所有的 linked list 都合併完成
+- 小記 & 心得：
+  - 應該是寫過最簡單的 HARD 題目了, 暴力解的部分
+  - multiple 解法簡單易懂, 但是實作的時候搞了滿久, 最後在紙上把示意圖畫出來後才順利完成, 太多指標真的容易頭昏。
+- Tags:
+  - *Linked List*
+- 難度: Hard
 - [X] post
 
 ### 36. Valid Sudoku
@@ -87,7 +114,7 @@
 - 小記 & 心得：
   - 看了網路上的 one pass 解, 不是很懂要如何使用 JS 重現
 - Tags: *array, hash-table*
-- 難度：Medium
+- 難度: Medium
 
 ### 42. Trapping Rain Water
 - 說明：
@@ -99,7 +126,7 @@
   - 第一個 Hard 題目, 被 two pointer 誤導, 沒想到用兩個陣列就能解
   - two pointer 題目找時間再寫, 滿 tricky 的
 - Tags: *two-pointer*
-- 難度：Hard
+- 難度: Hard
 
 ### 49 Group Anagram
 - 說明：
@@ -116,8 +143,8 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 使用 JS object 替代 map 來寫需要注意, 因 JS object 非 iterable, 所以 keys & Values 要透過 JS 提供的 method 來取得
   - 也許有更好的解法, 暫時未知
 - Tags: *array, hash table, string, sorting*
-- 難度：Medium
-- [X] Post
+- 難度: Medium
+- [X] post
 
 ### 121 Best Time to Buy and sell stock
 - 說明：
@@ -128,8 +155,8 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 對這題有印象, 懂了之後就非常簡單明瞭且不會忘了解答
 - Tags:
   - Array
-- 難度：Easy
-- [X] Post
+- 難度: Easy
+- [X] post
 
 
 
@@ -141,7 +168,19 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 小記 & 心得：
   - 這題滿單純的, 就是要知道怎麼轉換大寫字母為小寫, 並過濾掉所有非數字 ＆ 英文字母的字元 (ASCII), 每個語言提供的轉換函式不同, 用到在查, 不用死記硬背
 - Tags:
-- 難度：Easy
+- 難度: Easy
+
+### 141 Linked List Cycle
+- 說明：
+  - 給一個  Linked List head, 判斷該 linked list 的尾端, 是否又指向之前的 node, 此時整個 linked list 形成一個 cycle, 有 cycle 回傳 true, 反之則回 false
+- 解題方法：
+  - Contain Duplicate 解：類似 contain duplicate 題目判斷 node 是否重複
+  - [fast && slow pointer](./141.linked-list-cycle.js): 快慢指標, 快指標一次走兩步, 慢指標一次一步, 當快指標走到底前追上慢指標即表示有 cycle, 反之則無
+- 小記 & 心得：
+  - 簡單易懂又有趣的題目, 寫過一次就不會忘
+- Tags: *Linked List*
+- 難度: Easy
+- [X] post
 
 ### 143 Reorder List
 - 說明：
@@ -154,7 +193,7 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
   - 很好的融合 [206 - Reverse Linked List](#206-reverse-linked-list), [21 - Merge Two Sorted List](./21.merge-two-sorted-lists/), [876 - Middle Of The Linked List](./876.middle-of-the-linked-list.js) 這三個 Easy 題的進階題, 值得多寫幾次 XD
   - ![143 excalidraw graph](./images/leetcode_143_reorder_list.excalidraw.png)
 - Tags: *Linked-List*
-- 難度： Medium
+- 難度: Medium
 - [X] post
 
 ### 155 min-stack
@@ -165,8 +204,8 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 小記 & 心得：
   - 有趣的一個小題目, 想通了之後簡直豁然開朗, 而且非常有意思的是, 題目名稱本身就是一個最大的提示 (min-stack) XD
 - Tags: *Stack*
-- 難度：Medium
-- [X] blog post
+- 難度: Medium
+- [X] post
 
 ### 167 Two Sum II - Input Array is Sorted
 - 說明：
@@ -177,8 +216,8 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 小記 & 心得：
   - 重點是如何選擇要移動 two pointer 中的哪一個 pointer
 - Tags: *two-pointer*
-- 難度：Medium
-- [X] Post
+- 難度: Medium
+- [X] post
 
 ### 190 Reverse Bits
 TODO
@@ -192,7 +231,7 @@ TODO
   - 就是一個數學題目, 了解 10 進位轉 2 進位的原理與方法後就可以寫出來
 - Tags:
   - *Divide and Conquer, Bit Manipulation*
-- 難度：Easy
+- 難度: Easy
 - [X] blog post
 
 ### 206 Reverse Linked List
@@ -202,12 +241,12 @@ TODO
   - [額外空間](./206.reverse-linked-list/206.reverse-linked-list-additional.js): 先遍歷一遍 array 並將 value 存在 array 中, 最後在建一個新的反轉 LinkedList, 會使用到額外空間 O(n+n)=O(n)
   - [iterative](./206.reverse-linked-list/206.reverse-linked-list-iteratively.js): 遍歷 LinkedList, 一邊 run 一邊反轉整個 LinkedList
   - [recurrsive](./206.reverse-linked-list/206.reverse-linked-list-recursive.js): 遞歸解法, 將問題轉換成更小的子問題(在這題中為下一個 node 形成的 reverse list), 處理好 edge case 即可
-- 小記 & 心得：
+- 小記 & 心得:
   - iterative 以前就學過, 所以還算容易
   - recurrsive 得解法好像是第一次看到, 一開始比較抽象一點, 但將圖畫出來後有比較好理解了
   - ![206 excalidraw graph](./images/leetcode_206_reverse_linked_list.excalidraw.png)
 - Tags: *Linked-List*
-- 難度： Easy
+- 難度: Easy
 - [X] post
 
 ### 217 Contain Duplicate
@@ -222,7 +261,7 @@ TODO
 - 小記 ＆ 心得：
   - 這題就一樣是在練習 map 結構的使用, 不過實作是用 JS object 來替代 map 
 - Tags: array, hash table, sorting
-- 難度：Easy
+- 難度: Easy
 - [X] post
 
 ### 238 Product Of Array Expect Self
@@ -249,7 +288,7 @@ Output: [0,0,9,0,0]
   - 就算是**除法解**也不能無腦先相乘所有數字, 因為可能包含 0, 需要特別處理
   - prefix && suffix 解肯定是沒辦法靠自己想出來的特殊解法....
 - Tags: array
-- - 難度：Medium
+- - 難度: Medium
 
 ### 242 Valid Anagram
 - 說明：
@@ -261,7 +300,7 @@ Output: [0,0,9,0,0]
 - 小記：
   - sort 方法有借助 JS 的幾個 method, split(), sort(), join() 來處理字串排序
 - Tags: hash table, sorting
-- 難度：Easy
+- 難度: Easy
 - [X] post
 
 ### 268 Missing Number
@@ -276,8 +315,8 @@ Output: [0,0,9,0,0]
   - 沒想到最一開始的解法居然多此一舉, 我居然沒想到 sum 解如此單純的優化, 寫 sort 問題寫多了 XD
   - XOR 解：這又是哪一位天才想到的解法, 凡人基本上不可能自己想出來的。
 - Tags: *Array, Hash Table, Math, Binary Search, Bit Manipulation, Sorting*
-- 難度：Easy
-- [X] blog post
+- 難度: Easy
+- [X] post
 
 ### 271 Encoded And Decode Strings
 - 說明：
@@ -287,7 +326,7 @@ Output: [0,0,9,0,0]
 - 小記 & 心得：
   - 還以為是要用比較複雜的 separater 去解, 沒想到有這種方法
 - Tags: *string*
-- 難度：Medium
+- 難度: Medium
 
 ### 338 Counting Bits
 - 說明：
@@ -299,8 +338,8 @@ Output: [0,0,9,0,0]
 - 小記 & 心得：
   - 這題如果是用 Brute Force 的話的確是 easy 題, 因為就是執行數個 number-of-1-bits 的運算 (短除法), 但要在 O(n) 解的話就必須使用 DP 了, 難度肯定有到 medium
 - Tags:*Dynamic Programming, Bit Manipulation*
-- 難度：Easy
-- [X] blog post
+- 難度: Easy
+- [X] post
 
 ### 347 Top K Frequent Element
 - 說明：
@@ -316,7 +355,7 @@ Output: [2,3]
 - 小記 & 心得：
   - 在 Map 中找出前 K 筆最大的方式也許有更好的做法? 抑或是 map 的 key:value 儲存內容需要調整
 - Tags: array, hash table, heap 
-- 難度：Medium
+- 難度: Medium
 
 ### 424 Longest Repeating Character Replacement
 - 說明：給一個  input 字串 s, 與一個整數 k , 其中 k 表示可以用任意字元替換 s 中單一字元的次數, 求 s 經過最多 K 次操作後, 所能包含的最大 “相同字元子字串”。例：S = AAAABA, k=2, 此時  result 為 6 (B 可替換成 Ａ)
@@ -326,7 +365,7 @@ Output: [2,3]
   - 好難...就算是暴力解也需要思考一下, 在沒有提示的情況下, 跟 Hard 差不多 XD
   - 這題的思考過程中分享在 [blog post - leetcode w5](https://victorchao996.github.io/blog/Post/leetcode_weekly_practice/leetcode_w5.html#leetcode-practice-w5) 中
 - Tags: *Hash Table, String, Sliding Window*
-- 難度：Medium
+- 難度: Medium
 - [X] post
 
 ### 876 Middle of the Linked List
@@ -338,7 +377,7 @@ Output: [2,3]
 - 小記 & 心得：
   - 又是一個想通之後就不會忘記的簡單題目
 - Tags: *Linked-List*
-- 難度：Easy
+- 難度: Easy
 - [X] post
 
 
@@ -352,15 +391,15 @@ Output: [2,3]
   - 雖然有看了 Hint, 但是沒有想到解這題的時候有這麼順利, 不到十分鐘就寫出來了, 這給我滿大的成就感的 XD, 寫 Easy 題都不見得可以這麼快了, 更別說 Medium。
   - 用 excalidraw 畫了思考圖：![leetcode 1657 mind graph](./images/leetcode_1657_determine_if_two_strings_are_close.excalidraw.png)
 - Tags: *Hash Table, String, Sorting, Counting*
-- 難度：Medium
+- 難度: Medium
 - [ ] post
 
 ### Template
-- 說明：
-- 解題方法：
-- 小記 & 心得：
+- 說明:
+- 解題方法:
+- 小記 & 心得:
 - Tags:
-- 難度：
+- 難度:
 - [ ] post
 
 
