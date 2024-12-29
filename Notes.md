@@ -146,6 +146,32 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度: Medium
 - [X] post
 
+### 102 Binary Tree Level Order Traversal
+- 說明:
+  - input 一個 binary tree 的 head node, 將 tree 的 node value 以 level order 的方式返回 (nested list, 相同 level 在同一 list 中)
+- 解題方法:
+  - [BFS](./102.binary-tree-level-order-traversal/102.binary-tree-level-order-traversal-bfs.js)
+  - [DFS](./102.binary-tree-level-order-traversal/102.binary-tree-level-order-traversal-dfs.js)
+- 小記 & 心得:
+  - BFS 熟悉之後反而比較簡單
+  - DFS 解法是參考 [104 題](#104-maximum-depth-of-binary-tree) 算 depth 的方法想到的, 有點 tricky, 但還算好理解
+- Tags: *Binary Tree*
+- 難度: Medium
+- [X] post
+
+### 104 Maximum Depth of Binary Tree
+- 說明:
+  - input 一個 binary tree 的 head node, 定義 tree 的 depth, 其中 head node 為 1, head 的 left & right 為 2, 依此推類 ,求這個 binary tree 的 maximum depth
+- 解題方法:
+  - [Top Down (BFS)](./104.maximum-depth-of-binary-tree/104.maximum-depth-of-binary-tree-bfs.js)
+  - [Bottom Up](./104.maximum-depth-of-binary-tree/104.maximum-depth-of-binary-tree-dfs.js)
+- 小記 & 心得:
+  - 以前有學過這題, 所以 Bottom Up Approach 很容易就寫出來
+  - BFS 熟悉實作後也不難
+- Tags: *Binary Tree*
+- 難度: Easy
+- [X] post
+
 ### 121 Best Time to Buy and sell stock
 - 說明：
   - 給一個一維數字陣列表示隨時間的股票金額, 求這段時間內的最大獲利 (賣 - 買)
@@ -261,6 +287,22 @@ TODO
 - 小記 ＆ 心得：
   - 這題就一樣是在練習 map 結構的使用, 不過實作是用 JS object 來替代 map 
 - Tags: array, hash table, sorting
+- 難度: Easy
+- [X] post
+
+### 226 Invert Binary Tree
+- 說明:
+  - input 一個 binary tree 的 head node, 將整個 binary tree 做 invert (head node 之下所有 left node & right node 互相交換)並返回
+- 解題方法:
+  - [BFS](./226.invert-binary-tree/226.invert-binary-tree-bfs.js)
+  - [DFS iterative](./226.invert-binary-tree/226.invert-binary-tree-dfs-iterative.js)
+  - [DFS recursive](./226.invert-binary-tree/226.invert-binary-tree-dfs-recursive.js)
+  - [Top Down recursive](./226.invert-binary-tree/226.invert-binary-tree-top-down.js)
+  - [Bottom Up recursive](./226.invert-binary-tree/226.invert-binary-tree-bottom-up.js)
+- 小記 & 心得:
+  - 複習了 dfs & bfs, 還順便回想了以前講過的 Top Down & Bottom Up
+- Tags:
+  - *Binary Tree*
 - 難度: Easy
 - [X] post
 

@@ -16,7 +16,14 @@
 - Notes.md: 
   - 題目心得 & 小記
 
+## Notes
+- javascript 沒有內建 queue 相關資料結構, leetcode 使用第三方 library 來支援 queue/priority-queue 
+  - ![](./images/JS_notes.png)
+  - [Github: datastructures-js/queue](https://github.com/datastructures-js/queue/tree/v4.2.3)
+    - `import { Queue } from "@datastructures-js/queue";`
+
 ## Reference
 - [neetcode （leetcode 練習網站）](https://neetcode.io/)
 - [YT 刷題經驗分享](https://www.youtube.com/watch?v=dJc-h7ui8wc)
 - [B站算法題動畫解說](https://www.bilibili.com/video/BV1pz421h7ZX/?spm_id_from=333.337.search-card.all.click&vd_source=1140b1e79766052dfe86144117362782)
+

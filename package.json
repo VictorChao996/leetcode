@@ -9,5 +9,8 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@datastructures-js/queue": "^4.2.3"
+  }
 }
