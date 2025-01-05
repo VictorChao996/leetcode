@@ -146,6 +146,32 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度: Medium
 - [X] post
 
+### 98 Validate Binary Search Tree
+- 說明:
+  - input 一個 binary tree 的 root node, 判斷此 tree 是否為合法的 binary search tree, 對於此 tree 中所有的 node 皆滿足 left sub tree 所有的 node 小於該 root node, 而 right sub tree 中所有的 node 皆大於此 root node
+- 解題方法:
+  - [Inorder 判斷解](./98.validate-binary-search-tree/98.validate-binary-search-tree.js)
+  - [上下邊界遞迴解](./98.validate-binary-search-tree/98.validate-binary-search-tree-2.js)
+- 小記 & 心得:
+  - 能自己想出 inorder 解給我很大的信心 XD, 也順便回想起以前教的 preorder, inorder, postorder traversal, 若知道 inorder 觀念的話, 此題滿簡單的
+  - 第二種上下邊界的遞迴解法對我來說反而沒有這麼直覺, 無法第一時間想到
+- Tags: *Binary Tree, Binary Search Tree*
+- 難度: Medium
+- [X] post
+
+### 100 Same Tree
+- 說明:
+  - 給兩個 binary tree 的 root node, 判斷兩個 tree 是否結構上相同, 若相同回 true, 若不同則回 false
+- 解題方法:
+  - [DFS 解](./100.same-tree/100.same-tree-dfs.js)
+  - [BFS 解](./100.same-tree/100.same-tree-bfs.js)
+- 小記 & 心得:
+  - 邏輯判斷可以寫得很精簡, 但就是要想一下
+  - 可以當作練習 bfs & dfs 的基礎題目
+- Tags: *Binary Tree*
+- 難度: Easy
+- [X] post
+
 ### 102 Binary Tree Level Order Traversal
 - 說明:
   - input 一個 binary tree 的 head node, 將 tree 的 node value 以 level order 的方式返回 (nested list, 相同 level 在同一 list 中)
@@ -182,6 +208,18 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - Tags:
   - Array
 - 難度: Easy
+- [X] post
+
+### 124 Binary Tree Maximum Path Sum
+- 說明:
+  - 定義 node & node 之間的相連為 edge, 彼此相連的 node 叫做 adjacent node, 而數個 adjacent node edges 相連形成 path （其中每一個 node 至多只會相連兩個 edges ）。 定義 path sum 為經該 path 中所包含的 node 之 values 總和。 input 一個 binary tree 的 root node, 求其中的 maximum path sum （其中  node value 從 -1000 ~ 1000）
+- 解題方法:
+  - [DFS 解](./124.binary-tree-maximum-path-sum.js): 關鍵在於將找出所有的可能性 (計算 max path) 並持續紀錄更新最大值, 並在遞迴回傳值中去除會使得 path invalid 的可能性, 這樣計算才不會出錯
+- 小記 & 心得:
+  - 滿難的一題, 看了 Hint 還是寫錯, 沒考慮到 parent 使用 left,right subTree 可能會造成 invalid path 的狀況, 不能無腦寫出規則就遞迴 return
+  - 第一次寫這種應該算是遞迴的進階題嗎, 就是並不是將所有可能性列出來後就可以直接 return, 而是要考慮子問題的 return 值對於大問題來說是否合法, 算是滿有趣的一個題目
+- Tags: *Binary Tree, DFS*
+- 難度: Hard
 - [X] post
 
 

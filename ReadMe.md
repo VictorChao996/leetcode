@@ -27,3 +27,14 @@
 - [YT 刷題經驗分享](https://www.youtube.com/watch?v=dJc-h7ui8wc)
 - [B站算法題動畫解說](https://www.bilibili.com/video/BV1pz421h7ZX/?spm_id_from=333.337.search-card.all.click&vd_source=1140b1e79766052dfe86144117362782)
 
+## Tracking
+- 題目完成統計:
+	- Easy: 16 題
+	- Medium: 16 題
+	- Hard: 3 題
+- 總完成題數: 35/36 題
+- 階段性目標："完成 Leetcode/Neetcode 75 題", 共 75 題
+- 文章發布進度: 27 篇
+	- 階段目標達成度: 27/75 = 36.00%
+
+

@@ -1,6 +1,11 @@
-import { readFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 
-function countDifficulties(filePath) {
+const target = {
+	title: "完成 Leetcode/Neetcode 75 題",
+	count: 75,
+};
+
+function countProblems(filePath) {
 	try {
 		const content = readFileSync(filePath, "utf8");
 
@@ -10,7 +15,7 @@ function countDifficulties(filePath) {
 		const hardCount = (content.match(/難度: Hard/g) || []).length;
 
 		// 計算 H3 標題總數
-		const h3Count = (content.match(/^###\s/gm) || []).length;
+		const h3Count = (content.match(/^###\s/gm) || []).length - 1;
 
 		// 計算已發布的文章數量
 		const postCount = (content.match(/\[X\] post/g) || []).length;
@@ -22,6 +27,29 @@ function countDifficulties(filePath) {
 		console.log(`總完成題數: ${easyCount + mediumCount + hardCount} 題`);
 		console.log(`總題數: ${h3Count} 題`);
 		console.log(`已發布文章數: ${postCount} 篇`);
+
+		// 更新 README.md
+		const readmeContent = readFileSync("./README.md", "utf8");
+		const trackingSection = `## Tracking
+- 題目完成統計:
+	- Easy: ${easyCount} 題
+	- Medium: ${mediumCount} 題
+	- Hard: ${hardCount} 題
+- 總完成題數: ${easyCount + mediumCount + hardCount}/${h3Count} 題
+- 階段性目標："${target.title}", 共 ${target.count} 題
+- 文章發布進度: ${postCount} 篇
+	- 階段目標達成度: ${postCount}/${target.count} = ${(
+			(postCount / target.count) *
+			100
+		).toFixed(2)}%
+`;
+
+		const updatedContent = readmeContent.replace(
+			/## Tracking[\s\S]*?(?=##|$)/,
+			`${trackingSection}\n\n`
+		);
+
+		writeFileSync("./README.md", updatedContent);
 
 		return {
 			easy: easyCount,
@@ -43,4 +71,4 @@ function countDifficulties(filePath) {
 }
 
 // 執行統計
-countDifficulties("./Notes.md");
+countProblems("./Notes.md");
