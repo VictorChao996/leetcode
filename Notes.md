@@ -105,6 +105,19 @@
 - 難度: Hard
 - [X] post
 
+### 33. Search In Rotated Sorted Array
+- 說明:
+  - input 一個 "選轉" 過的 sorted array (asc) 與 target K, 求 target K 在 sorted array 中的位置, 若不存在則返回 -1
+- 解題方法:
+  - 暴力解：就遍歷一遍 array 直接搜, Time Complexity: O(n)
+  - [BS 解一](./33.search-in-rotated-sorted-array/33.search-in-rotated-sorted-array.js): 根據 target 與 mid 左半段的上下屆 & mid 右半段的上下屆來判斷下個要選擇檢查的區間
+  - [BS 解二](./33.search-in-rotated-sorted-array/33.search-in-rotated-sorted-array_2.js): 比較直觀一點, 用正向邏輯來判斷為在哪一個區間內
+- 小記 & 心得:
+  - 進階版 Binary Search, 解一為 Neetcode 參考解, 個人覺得不好理解, 可以參考解二, 兩個概念一樣, 針對 mid 位於左 sorted array 或 右 sorted array 來分別寫判斷式
+- Tags: *Binary Search*
+- 難度: Medium
+- [X] post
+
 ### 36. Valid Sudoku
 - 說明：
   - 給一個二維陣列表示數獨的樣貌, 求該數獨是否合法
@@ -260,6 +273,20 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度: Medium
 - [X] post
 
+### 153 Find Minimum In Rotated Sorted Array
+- 說明:
+  - 給一個從小大到排序過後的 number array, 其中定義此 array 的 “旋轉”, 將首位數字放到陣列的最後一位, 其他數字依序往前遞補。題目的 input 可以為經過任一旋轉 n 次的 array, 求此 input array 中的最小值。
+- 解題方法:
+  - [Binary Search 解一](./153.find-minimum-in-rotated-sorted-array2.js): 重點在根據 left, mid, right 三者之間的大小關係決定要 BS 要選擇的區間
+  - [Binary Search 解二](./153.find-minimum-in-rotated-sorted-array_2.js)：概念上判斷 mid 是在左 sorted 區塊或右 sorted 區塊, 再 BS 移動 left, right 指標
+- 小記 & 心得:
+  - 有想到怎麼判斷最小點 & Binary Search, 但選擇區間的策略一開始做錯, 倒置部分 case 不會過
+  - 看了 Hint 後有想到可以從 left, mid, right 三者組合去判斷, 自己寫出一個版本來
+  - neetcode 參考解的概念有點類似但不太判斷的點不太一樣, 寫起來較簡潔一點
+- Tags: *Binary Search*
+- 難度: Medium
+- [X] post
+
 ### 155 min-stack
 - 說明：
   - 給一個 min-stack 的定義, 根據限制條件實作所有的 method 。
@@ -339,9 +366,22 @@ TODO
   - [Bottom Up recursive](./226.invert-binary-tree/226.invert-binary-tree-bottom-up.js)
 - 小記 & 心得:
   - 複習了 dfs & bfs, 還順便回想了以前講過的 Top Down & Bottom Up
-- Tags:
-  - *Binary Tree*
+- Tags: *Binary Tree*
 - 難度: Easy
+- [X] post
+
+### 230 Kth Smallest Element In A BST (Binary Search Tree)
+- 說明:
+  - input 一個 BST 的 root node & number K, 求這個 BST 中第 K 小的 node 的 value
+- 解題方法:
+  - [inorder, recursive 解](./230.kth-smallest-element-in-a-bst/230.kth-smallest-element-in-a-bst.js)
+  - [inorder, recursive 解 - 無額外空間](./230.kth-smallest-element-in-a-bst/230.kth-smallest-element-in-a-bst_space_improve.js)
+  - [inorder, iterative 解](./230.kth-smallest-element-in-a-bst/230.kth-smallest-element-in-a-bst-iterative.js)
+- 小記 & 心得:
+  - 與 98 題目 inorder 解一樣, 一個合法的 BST 在 inorder 順序之下, node value 會呈現升序排列
+  - 這題可以也可以當作 Binary Tree 的基本題練習
+- Tags: *Binary Search Tree, Binary Tree*
+- 難度: Medium
 - [X] post
 
 ### 238 Product Of Array Expect Self
@@ -447,6 +487,18 @@ Output: [2,3]
 - Tags: *Hash Table, String, Sliding Window*
 - 難度: Medium
 - [X] post
+
+### 704 Binary Search
+- 說明:
+  - 給一個從小到大排序過的數字 array 與 target K, 求 k 在陣列中的位置, 若不存在則返回 -1
+- 解題方法:
+  - [Binary Search](./704.binary-search.js)
+- 小記 & 心得:
+  - 基礎中的基礎 Binary Search 題目的最基本題型
+  - 核心思想就是將檢查的範圍縮小成原先範圍的 1/2, 這樣搜尋時間就會變成 O(log N)
+- Tags: *Binary Search*
+- 難度: Easy
+- [ ] post
 
 ### 876 Middle of the Linked List
 - 說明：
