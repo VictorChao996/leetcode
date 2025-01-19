@@ -211,6 +211,19 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度: Easy
 - [X] post
 
+### 105 Construct Binary Tree From Preorder And Inorder Traversal
+- 說明:
+  - input preorder array & Inorder array 分別表示同一個 tree 的在 preorder ＆ inorder 順序下, 各個 node value 的順序, 其中 array 不包含 null, 且 tree 的每一個 node value 保證唯一。
+- 解題方法:
+  - [DFS 解](./105.construct-binary-tree-from-preorder-and-inorder-traversal/105.construct-binary-tree-from-preorder-and-inorder-traversal.js): 利用 preorder & inorder 與左右子樹之間的關係去 recursive 解此題
+  - [DFS + hashmap 解](./105.construct-binary-tree-from-preorder-and-inorder-traversal/105.construct-binary-tree-from-preorder-and-inorder-traversal-improve.js)：利用 hashmap 縮短過程中找 index 的 Time Complexity
+- 小記 & 心得:
+  - 又是一個好像寫過, 但是看到當下完全沒有想法的題目, 真的難啊, 明明才 Medium...
+  - 其實概念真的不會到太難, 難在要自己看出這個規律並且實作 DFS....
+- Tags: *Binary Tree, DFS*
+- 難度: Medium
+- [X] post
+
 ### 121 Best Time to Buy and sell stock
 - 說明：
   - 給一個一維數字陣列表示隨時間的股票金額, 求這段時間內的最大獲利 (賣 - 買)
@@ -384,6 +397,20 @@ TODO
 - 難度: Medium
 - [X] post
 
+### 235 Lowest Common Ancestor of A Binary Search Tree
+- 說明: input 一個 tree 的 root node 與 其中的任一兩個 node: p, q, 求 p & q 的最小共同祖先 node
+- 解題方法:
+  - [BS 解 - iterative](./235.lowest-common-ancestor-of-a-binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree_binary_search_iterative.js)
+  - [BS 解 - recursive](./235.lowest-common-ancestor-of-a-binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree_binary_search_recursive.js)
+  - [LCA 解](./235.lowest-common-ancestor-of-a-binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
+  - [LCA 解 (improve)](./235.lowest-common-ancestor-of-a-binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree_improve.js): LCA 的優化
+- 小記 & 心得:
+  - 沒有想到會先想出 LCA 解, 此方法的 input tree 不需要是 BST 也可以找
+  - BS 解的概念簡單, 時間複雜度也較好, 但是第一次理解概念要想一下
+- Tags: *Tree, Binary Tree, Binary Search*
+- 難度: Medium
+- [X] post
+
 ### 238 Product Of Array Expect Self
 - 說明：
   - 給定一個數字陣列, 返回除了該位置外所有數字相乘的結果的陣列
@@ -486,6 +513,16 @@ Output: [2,3]
   - 這題的思考過程中分享在 [blog post - leetcode w5](https://victorchao996.github.io/blog/Post/leetcode_weekly_practice/leetcode_w5.html#leetcode-practice-w5) 中
 - Tags: *Hash Table, String, Sliding Window*
 - 難度: Medium
+- [X] post
+
+### 572 Subtree of Another Tree
+- 說明: input 一個 tree 的 root node (root), 與另一個 tree 的 root node (subRoot), 判斷後者是否為前者的 subTree, 是則返回 true, 不是則回 false
+- 解題方法:
+  - [BFS 解](./572.subtree-of-another-tree.js)
+- 小記 & 心得:
+  - 是先寫過 [100.Same Tree](#100-same-tree) 的話, 那這題其實滿簡單的, 就是多做幾次罷了 XD
+- Tags: *Tree, Binary Tree*
+- 難度: Easy
 - [X] post
 
 ### 704 Binary Search
