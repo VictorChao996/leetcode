@@ -286,6 +286,19 @@ Output: [["hat"],["act", "cat"],["stop", "pots", "tops"]]
 - 難度: Medium
 - [X] post
 
+### 151 Reverse Words in a String
+- 說明:
+  - input 一個字串, 將字串中的 "word" 順序給顛倒過來, 同時 word 間多餘的空格
+- 解題方法:
+  - [O(n^2)](./151.reverse-words-in-a-string/151.reverse-words-in-a-string.js): 直接使用 JS array 自帶的 unshift method 將字串中的 word 給反轉過來。
+  - [O(n)](./151.reverse-words-in-a-string/151.reverse-words-in-a-string_2.js):用 JS 字串相加
+- 小記 & 心得:
+  - 這題概念不難, 不確定為什麼是 medium, 有可能是 follow-up (in-place with O(1) additional space)比較嚴格一點
+
+- Tags: *String*
+- 難度: Medium
+- [] post
+
 ### 153 Find Minimum In Rotated Sorted Array
 - 說明:
   - 給一個從小大到排序過後的 number array, 其中定義此 array 的 “旋轉”, 將首位數字放到陣列的最後一位, 其他數字依序往前遞補。題目的 input 可以為經過任一旋轉 n 次的 array, 求此 input array 中的最小值。
@@ -475,6 +488,19 @@ Output: [0,0,9,0,0]
 - Tags: *string*
 - 難度: Medium
 
+### 283 Move Zeros
+- 說明:
+  - input 一個數字 array, 其中包含任意整數, 將 input array 中的所有 0 放到 array 的最後, 題目要求必須要 in-place 操作。
+- 解題方法:
+  - [O(n) - 解一](./283.move-zeros/283.move-zeroes.js)：先覆蓋, 再將 0 補回去
+  - [O(n) - 解二](./283.move-zeros/283.move-zeroes2.js)：直接進行 swap 動作
+- 小記 & 心得:
+  - in place 的基礎練習題, 可以多練幾次
+
+- Tags: *Array*
+- 難度: Easy
+- [] post
+
 ### 338 Counting Bits
 - 說明：
   - 給一個整數 n , 返回一個大小為 n+1 的數字陣列, 其中的每項元素 i (0 <= i <= n) 為 i 轉換成二進制後 bit 1 的數量。
@@ -501,8 +527,22 @@ Output: [2,3]
   3. [類似 heap 的 bucket 解](./347.top-k-frequent-element/347.top-k-frequent-elements_bucket.js)： Time: O(n)
 - 小記 & 心得：
   - 在 Map 中找出前 K 筆最大的方式也許有更好的做法? 抑或是 map 的 key:value 儲存內容需要調整
-- Tags: array, hash table, heap 
+- Tags: *array, hash table, heap* 
 - 難度: Medium
+- [] post
+
+### 392 Is Subsequence
+- 說明: 
+  - 給兩個 input 字串 s, t, 若 s 為 t 的 subsequence 則返回 true, 否則返回 false。其中 subsequence 為字串去掉其中的字元後, 順序不變者。
+  - Ex1: Input: s = "abc", t = "ahbgdc", Output: true
+  - Ex2: Input: s = "axc", t = "ahbgdc", Output: false
+- 解題方法:
+  - [Two Pointer](./392.is-subsequence.js): 遍歷長的字串 t, 若相同的字串則 +1, 最後比較計數是否會與 s 相同
+- 小記 & 心得:
+  - two pointer 類型的基本題, 值得多練幾次
+- Tags: *Two Pointers, Array*
+- 難度: Easy
+- [ ] post
 
 ### 424 Longest Repeating Character Replacement
 - 說明：給一個  input 字串 s, 與一個整數 k , 其中 k 表示可以用任意字元替換 s 中單一字元的次數, 求 s 經過最多 K 次操作後, 所能包含的最大 “相同字元子字串”。例：S = AAAABA, k=2, 此時  result 為 6 (B 可替換成 Ａ)
@@ -537,6 +577,16 @@ Output: [2,3]
 - 難度: Easy
 - [ ] post
 
+### 724 Find Pivot Index
+- 說明:
+  - Given an array of integers nums, calculate the pivot index of this array. The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right.
+- 解題方法:
+  - [O(n)](./724.find-pivot-index.js)
+- 小記 & 心得:
+- Tags: *Array*
+- 難度: Easy
+- [ ] post
+
 ### 876 Middle of the Linked List
 - 說明：
   - 給一個 Linked List 的 head, 返回此 linked list 的中間 node, 若 node 總數為偶數, 則返回中間兩
@@ -549,6 +599,19 @@ Output: [2,3]
 - 難度: Easy
 - [X] post
 
+### 1071 Greatest Common Divisor of Strings
+- 說明:
+  - For two strings s and t, we say "t divides s" if and only if s = t + t + t + ... + t + t (i.e., t is concatenated with itself one or more times).
+  - Given two strings str1 and str2, return the largest string x such that x divides both str1 and str2.
+
+- 解題方法:
+  - [解一](./1071.greatest-common-divisor-of-strings/1071.greatest-common-divisor-of-strings.js)
+  - [解二](./1071.greatest-common-divisor-of-strings/1071.greatest-common-divisor-of-strings_2.js)
+- 小記 & 心得:
+  - 又是一個神奇題目, 懂 gcd 的話不難, 不會的話難度上升
+- Tags: *Math, String*
+- 難度: Easy
+- [ ] post
 
 ### 1657 Determine If Two Strings Are Close
 - 說明：
@@ -560,6 +623,52 @@ Output: [2,3]
   - 雖然有看了 Hint, 但是沒有想到解這題的時候有這麼順利, 不到十分鐘就寫出來了, 這給我滿大的成就感的 XD, 寫 Easy 題都不見得可以這麼快了, 更別說 Medium。
   - 用 excalidraw 畫了思考圖：![leetcode 1657 mind graph](./images/leetcode_1657_determine_if_two_strings_are_close.excalidraw.png)
 - Tags: *Hash Table, String, Sorting, Counting*
+- 難度: Medium
+- [ ] post
+
+### 1732 Find the Highest Altitiude
+- 說明:
+  - There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
+  - You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
+- 解題方法:
+  - [](./1732.find-the-highest-altitude.js)
+- 小記 & 心得:
+- Tags: *Array*
+- 難度: Easy
+- [ ] post
+
+### 1768 Merge Strings Alternately
+- 說明:
+  - You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+- 解題方法:
+  - [two pointer 解](./1768.merge-strings-alternately.js)
+- 小記 & 心得:
+  - 又是一個 two pointer 基礎題目, 可以當作練習
+- Tags: *two-pointe*r
+- 難度: Easy
+- [ ] post
+
+### 2215 Find the Difference of Two Arrays
+- 說明:
+  - Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
+  - answer[0] is a list of all distinct integers in nums1 which are not present in nums2. answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
+  - Note that the integers in the lists may be returned in any order.
+- 解題方法:
+  - [map 解](./2215.find-the-difference-of-two-arrays.js)
+- 小記 & 心得:
+  - 雙 map 解, 可以當作對 programming language 的類 map 結構的練習題
+- Tags: *Array, Hash-table*
+- 難度: Easy
+- [ ] post
+
+### 2390 Removeing Stars From a String
+- 說明:
+  - input 一個字串, 其中包含任意字元 & '*' 字元, 求對所有 * 號以及其左邊的非 * 號字元後的字串
+- 解題方法:
+  - [Stack 解](./2390.removing-stars-from-a-string.js)
+- 小記 & 心得:
+  - 如果了解 stack 的概念, 那這題滿簡單的直觀的, 可以當作 stack 題的基礎題目來反覆練習
+- Tags: *String, Stack*
 - 難度: Medium
 - [ ] post
 
