@@ -22,3 +22,25 @@
 > **Day 1 重點 API**：`list slicing`、`enumerate()`、`set()`、`sum()`、`sorted()`
 >
 > **Day 1 目標**：寫 Python 不再需要查語法，手感建立起來
+
+---
+
+## Completion Report
+
+### Learning
+- [python_basics.py](7-day-sprint/day1/python_basics.py) — Done
+
+### Problems (6/6 completed)
+
+| # | Problem | File | Status | Solution Approach |
+|---|---------|------|--------|-------------------|
+| 1 | 217 Contains Duplicate | 217.contains-duplicate.py | Done | Set length comparison — `len(nums) != len(set(nums))` |
+| 2 | 268 Missing Number | 268.missing-number.py | Done | Bucket counting array |
+| 3 | 283 Move Zeroes | 283.move-zeroes.py | Done | Two-pointer in-place swap |
+| 4 | 26 Remove Duplicates from Sorted Array | 26.remove-duplicates-from-sorted-array.py | Done | Two-pointer (slow/fast) |
+| 5 | 88 Merge Sorted Array | 88.merge-sorted-array.py | Done | Reverse two-pointer merge from end |
+| 6 | 169 Majority Element | 169.majority-element.py | Done | Dict frequency counting with `dict.get()` |
+
+> Bonus: `268.missing-number-2.py` (set XOR approach), `268.missing-number-3.py` (math sum approach), `169.majority-element-2.py` (Boyer-Moore voting algorithm)
+
+### Verdict: Done
