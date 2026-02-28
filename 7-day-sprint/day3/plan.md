@@ -16,3 +16,22 @@
 > **Day 3 重點 API**：`sorted(key=lambda)`、`list.sort()`、`zip()`、`list comprehension`、`max()`/`min()`
 >
 > **Day 3 目標**：Two Pointer 和 Interval 題型能在 25 分鐘內穩定解出
+
+---
+
+## Completion Report
+
+### Problems (6/6 completed)
+
+| # | Problem | File | Status | Solution Approach |
+|---|---------|------|--------|-------------------|
+| 1 | 167 Two Sum II | 167.two-sum-ii-input-array-is-sorted.py | Done | Two pointer 左右夾擊，利用排序特性移動指標 |
+| 2 | 977 Squares of a Sorted Array | 977.squares-of-a-sorted-array.py | Done | 暴力解：先平方再 sorted，O(n log n) |
+| 3 | 15 3Sum | 15.3-sum.py | Done | Sort + 外層遍歷 + 內層 two pointer，skip duplicate |
+| 4 | 75 Sort Colors | 75.sort-colors.py | Done | Two pass bucket sort：計數再覆寫 |
+| 5 | 56 Merge Intervals | 56.merge-intervals.py | Done | Sort by start + 逐一比較 end 判斷重疊合併 |
+| 6 | 57 Insert Interval | 57.insert-interval.py | Done | 找插入點插入 + 56 題 merge interval 邏輯 |
+
+> Bonus: `977.squares-of-a-sorted-array-2.py`（Two pointer O(n) 解法）、`75.sort-colors-2.py`（Dutch National Flag one pass 解法）、`56.merge-intervals-2.py`（直接更新 result[-1] 優化版）、`57.insert-interval-2.py`（三階段 one pass 解法）
+
+### Verdict: Done
