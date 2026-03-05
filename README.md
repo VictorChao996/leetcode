@@ -8,6 +8,11 @@
 - 難度範圍：Easy ~ Medium（不碰 Hard）
 - 預計完成：40 題（重寫 18 題 + 新題 22 題）
 
+### 目標調整
+- 衝刺目標緩和, 改成每天持續至少有寫 1 題即可。
+- 不求看到題目能直接解完, 而是以建立 Python 手感為目標去寫。
+  - 沒概念直接看 Hint
+
 ## 面試資訊
 - 職位：QA / SDET
 - 重點技能：Automation Framework、API Testing、CI/CD、HTTP/REST/MQTT

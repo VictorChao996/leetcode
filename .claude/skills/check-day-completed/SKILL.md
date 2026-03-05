@@ -1,5 +1,5 @@
 ---
-name: check-day
+name: check-day-completed
 description: Check if a specific day of the 7-day sprint is fully completed
 argument-hint: "[day-number, e.g. 1]"
 ---
